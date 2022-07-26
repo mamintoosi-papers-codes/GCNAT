@@ -76,7 +76,7 @@ def cross_validation_experiment(met_dis_matrix, met_matrix, dis_matrix, seed, ep
     random_index = index_matrix.T.tolist()
     random.seed(seed)
     random.shuffle(random_index)
-    k_folds = 5
+    k_folds = 10
     CV_size = int(association_nam / k_folds)
     temp = np.array(random_index[:association_nam - association_nam %
                                  k_folds]).reshape(k_folds, CV_size,  -1).tolist()
@@ -108,7 +108,7 @@ if __name__ == "__main__":
     met_sim = np.loadtxt('../data/GM2.csv', delimiter=',')
     dis_sim = np.loadtxt('../data/DSS.csv', delimiter=',')
     met_dis_matrix = np.loadtxt('../data/newdata.csv', delimiter=',')
-    epoch = 500
+    epoch = 300
     emb_dim = 64
     lr = 0.01
     adjdp = 0.5
