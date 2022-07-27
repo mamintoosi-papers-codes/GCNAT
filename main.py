@@ -108,9 +108,9 @@ if __name__ == "__main__":
 #     met_sim = np.loadtxt('../data/GM2.csv', delimiter=',')
 #     dis_sim = np.loadtxt('../data/DSS.csv', delimiter=',')
 #     met_dis_matrix = np.loadtxt('../data/newdata.csv', delimiter=',')
-    met_sim = np.loadtxt('Mets.csv')
-    dis_sim = np.loadtxt('Plants.csv')
-    met_dis_matrix = np.loadtxt('Mets_Plants.csv')
+    met_sim = np.loadtxt('Mets.csv', delimiter=',')
+    dis_sim = np.loadtxt('Plants.csv', delimiter=',')
+    met_dis_matrix = np.loadtxt('Mets_Plants.csv', delimiter=',')
     epoch = 300
     emb_dim = 64
     lr = 0.01
